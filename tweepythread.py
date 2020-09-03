@@ -1,16 +1,22 @@
 #!/usr/bin/python
-
 # Jacob Mannix [08-31-2020]
 
+# Import Dependencies
+import tweepy
+
+# Environment Variables - change in '.env' file
+twitterUser = os.getenv("TWITTER_ACCOUNT")
+ckey = os.getenv("API_KEY")
+csecret = os.getenv("API_SECRET")
+atoken = os.getenv("API_ACCESS_TOKEN")
+asecret = os.getenv("API_ACCESS_SECRET")
+
+# Environment Variables - uses .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 # Tweepy Thread Function
-
-# API Keys
-ckey = "APIKEY"
-csecret = "APISECRETKEY"
-atoken = "APIACCESSTOKEN"
-asecret = "APIACCESSTOKENSECRET"
-
-def tweepyThread(user, list):
+def tweepyThread(user, list, ckey, csecret, atoken, asecret):
     # Authenticate to Twitter
     auth = tweepy.OAuthHandler(ckey, csecret)
     auth.set_access_token(atoken, asecret)
@@ -18,6 +24,7 @@ def tweepyThread(user, list):
     # Create API object
     api = tweepy.API(auth)
     
+    # Loops through list to reply to the previoud tweet to create a thread
     count = 0
     for i in list:
         statuses = api.user_timeline(user, count = 1) 
@@ -26,9 +33,9 @@ def tweepyThread(user, list):
             for status in statuses:
                 tweetid = status.id
             api.update_status(status = i, in_reply_to_status_id = tweetid , auto_populate_reply_metadata=True)
-            time.sleep(2) # optional sleep between each tweet
+            # time.sleep(2) # optional sleep between each tweet
         else:
             api.update_status(status = i)
-            time.sleep(2) # optional sleep between each tweet
+            # time.sleep(2) # optional sleep between each tweet
 
-# tweepyThread(user, list)
+# tweepyThread(user, list, ckey, csecret, atoken, asecret)

@@ -1,7 +1,7 @@
 # TweepyThread
 Python function for Tweepy to send a thread of tweets.
 
-![ThreadVNormalTweets](threadvnormaltweets.jpeg)
+![ThreadVNormalTweets](images/threadvnormaltweets.jpeg)
 
 ---
 
