@@ -5,8 +5,9 @@ Python function for Tweepy to send a thread of tweets.
 
 ---
 
-- Create a [Twitter Developer Account](https://developer.twitter.com/).
-- Install [tweepy](https://www.tweepy.org/) python package.
+Create a [Twitter Developer Account](https://developer.twitter.com/).
+
+Install [tweepy](https://www.tweepy.org/) python package.
 
 ### Change variables in '.env'
 See the docs: [python-dotenv](https://github.com/theskumar/python-dotenv)
