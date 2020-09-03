@@ -4,16 +4,16 @@
 # Import Dependencies
 import tweepy
 
+# Load Environment Variables - uses .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 # Environment Variables - change in '.env' file
 twitterUser = os.getenv("TWITTER_ACCOUNT")
 ckey = os.getenv("API_KEY")
 csecret = os.getenv("API_SECRET")
 atoken = os.getenv("API_ACCESS_TOKEN")
 asecret = os.getenv("API_ACCESS_SECRET")
-
-# Environment Variables - uses .env file
-from dotenv import load_dotenv
-load_dotenv()
 
 # Tweepy Thread Function
 def tweepyThread(user, list, ckey, csecret, atoken, asecret):
