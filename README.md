@@ -3,7 +3,7 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/jacobmannix/tweepythread)](https://github.com/JacobMannix/kubernetes-stafford)
 [![GitHub last commit](https://img.shields.io/github/last-commit/jacobmannix/tweepythread)](https://github.com/JacobMannix/kubernetes-stafford/commits/master)
 
-> <b> Python function that uses the Tweepy in order to send a thread of tweets. </b>
+> <b> Python function that uses the Tweepy package in order to send a thread of tweets. </b>
 
 ![ThreadVNormalTweets](images/threadvnormaltweets.jpeg)
 
@@ -15,7 +15,7 @@
 ```python
 pip install tweepy
 ```
-
+#
 ### Variables in '.env'
 See the docs: [python-dotenv](https://github.com/theskumar/python-dotenv)
 ```python
