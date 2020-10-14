@@ -1,22 +1,36 @@
 # Send a thread of tweets with Tweepy
-Python function for Tweepy to send a thread of tweets.
+[![GitHub](https://img.shields.io/github/license/jacobmannix/tweepythread?color=blue)](LICENSE)
+[![GitHub top language](https://img.shields.io/github/languages/top/jacobmannix/tweepythread)](https://github.com/JacobMannix/kubernetes-stafford)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jacobmannix/tweepythread)](https://github.com/JacobMannix/kubernetes-stafford/commits/master)
+
+> <b> Python function that uses the Tweepy in order to send a thread of tweets. </b>
 
 ![ThreadVNormalTweets](images/threadvnormaltweets.jpeg)
 
----
+#
 
-Create a [Twitter Developer Account](https://developer.twitter.com/).
+### Prerequisites
+- A [Twitter Developer Account](https://developer.twitter.com/) in order to get Twitter API keys.
+- [tweepy](https://www.tweepy.org/) python package installed.
+```python
+pip install tweepy
+```
 
-Install [tweepy](https://www.tweepy.org/) python package.
-
-### Change variables in '.env'
+### Variables in '.env'
 See the docs: [python-dotenv](https://github.com/theskumar/python-dotenv)
-- API_KEY = "YOUR_KEY_HERE"
-- API_SECRET = "YOUR_KEY_HERE"
-- API_ACCESS_TOKEN = "YOUR_KEY_HERE"
-- API_ACCESS_SECRET = "YOUR_KEY_HERE"
-- TWITTER_ACCOUNT = "YOUR_@TWITTER_HERE"
+```python
+API_KEY = "YOUR_KEY_HERE"
+API_SECRET = "YOUR_KEY_HERE"
+API_ACCESS_TOKEN = "YOUR_KEY_HERE"
+API_ACCESS_SECRET = "YOUR_KEY_HERE"
+TWITTER_ACCOUNT = "YOUR_@TWITTER_HERE"
+```
 
----
+#
+### Call Function
+Place tweepythread.py in working directory
+```python
+from tweepythread import tweepyThread
 
-Licensed under the [MIT License](LICENSE).
+tweepyThread(user, list, ckey, csecret, atoken, asecret)
+```
